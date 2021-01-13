@@ -1,0 +1,142 @@
+@import './variables.scss';
+
+html,
+body {
+  // font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+  color: $title-dark;
+  background: $grey;
+}
+
+h1,
+h2 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 0.8em;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 30px;
+  z-index: 2;
+  background: $red;
+
+  h1 {
+    font-size: 16px;
+    margin: 0 auto;
+    color: $white;
+  }
+
+  i {
+    position: absolute;
+    color: $white;
+    right: 20px;
+    font-size: 12px;
+  }
+}
+
+.oval-container {
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  background: $header-red;
+  border-radius: 0 0 50% 50% / 40px;
+
+  .title-container {
+    padding: 0 20px;
+    margin-top: 30px;
+    color: $white;
+
+    p {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+  }
+}
+
+.claim-container {
+  padding: 30px 20px 10px 20px;
+
+  h2 {
+    font-size: 1.1em;
+  }
+
+  p:nth-of-type(1) {
+    padding: 0 20px;
+  }
+
+  .claim-step:nth-of-type(1) {
+    border: 2px solid $red;
+  }
+
+  .claim-step {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    background: $white;
+    margin: 15px 0;
+    padding: 5px;
+    border: 2px solid $placeholder;
+    border-radius: 10px;
+    line-height: 18px;
+
+    &.active {
+      h3 {
+        color: $red;
+      }
+    }
+
+    .circle-container {
+      border: 2px solid $placeholder;
+      border-radius: 50%;
+      position: relative;
+      right: 17px;
+      width: 18px;
+      background: $white;
+      text-align: center;
+      height: 18px;
+
+      &.active {
+        border: 2px solid $red;
+
+        span {
+          color: $red;
+        }
+      }
+
+      span {
+        font-weight: 500;
+        font-size: 0.9em;
+        color: $placeholder;
+      }
+    }
+
+    p {
+      padding: 0 10px 0 0;
+    }
+
+    h3,
+    i {
+      margin-right: 15px;
+    }
+
+    i {
+      font-size: 20px;
+      color: $placeholder;
+    }
+  }
+}
